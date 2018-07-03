@@ -1,4 +1,4 @@
-# Sharedcount
+# New project
 
 #### Install dependencies:
 ```
