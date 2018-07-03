@@ -1,0 +1,124 @@
+doctype html
+html(lang="en")
+head
+		title Sharedcount
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		link(rel="stylesheet" type="text/css" href="./styles/main.min.css")
+body
+	.index-wrap
+		include ../sections/header.pug
+
+		include ../sections/hero.pug
+
+		include ../sections/table.pug
+
+		include ../sections/partners.pug
+
+		include ../sections/about.pug
+
+		include ../sections/why-choose.pug
+
+		include ../sections/try-api.pug
+
+		include ../sections/how-it-works.pug
+
+		include ../sections/signup-section.pug
+
+		include ../sections/footer.pug
+
+	.popup-wrap.popup-wrap_void.popup-wrap_registration
+		.popup
+			.popup__content
+				span(href="#").popup__close-btn
+				p.popup__caption.popup__caption_congratulation
+					|Register
+				input(type="email" placeholder="Email address").popup__input.popup__input_email
+				.login-pass-wrap
+					input(type="password" placeholder="Password").popup__input.popup__input_pass
+					span.login-pass-wrap__reliability Strong
+					.login-pass-wrap__progress
+						.login-pass-wrap__progress-bar.login-pass-wrap__progress-bar_strong(aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%;" )
+				button.button.button__modal.button__modal_create-acc Create Account
+
+				button.button.button__modal.button__modal_via-face
+					span.button__text
+						|Register via Facebook
+				p.popup__text.popup__text_min
+					|By registering, you agree to the 
+					a(href="#") Terms of Service 
+					|and 
+					a(href="#") Privacy Policy
+				p.popup__after-text
+					|Already have an account?
+					br
+					span.login-triger Log In
+	.popup-wrap.popup-wrap_void.popup-wrap_login
+		.popup
+			.popup__content
+				span(href="#").popup__close-btn
+				p.popup__caption.popup__caption_congratulation
+					|Login
+				input(type="email" placeholder="Login").popup__input.popup__input_email
+				.login-pass-wrap
+					input(type="password" placeholder="Password").popup__input.popup__input_pass
+					span.login-pass-wrap__reliability.login-pass-wrap__reliability_forgot Forgot?
+				button.button.button__modal.button__modal_login Login	
+
+				button.button.button__modal.button__modal_via-face
+					span.button__text
+						|Login via Facebook
+				p.popup__after-text
+					|Dont have an account?
+					br
+					span.register-triger Register
+	.popup-wrap.popup-wrap_void.popup-wrap_pass-recover
+		.popup
+			.popup__content
+				span(href="#").popup__close-btn
+				p.popup__caption.popup__caption_congratulation
+					|Password
+					br
+					|Recovery
+				p.popup__text
+					|To reset your password, enter the email address you use to sign in to ShareCount. It can be your email address, an email address you use with one of the social networks, or any email address associated with your account.
+				input(type="email" placeholder="Email Address").popup__input.popup__input_email
+				.login-pass-wrap
+				button.button.button__modal.button__modal_recover Send
+	.popup-wrap.popup-wrap_void.popup-wrap_pass-recover-second
+		.popup
+			.popup__content
+				span.popup__close-btn
+				p.popup__caption.popup__caption_congratulation
+					|Password
+					br
+					|recovery email sent
+				p.popup__text
+					|We’ve sent you an email containing a password recovery link. You will be able to reset your password by clicking the link within the next 24 hours. Please click on the button in your email.
+				p.popup__text.popup__text_divider
+					|If you don’t see the email, be sure to check the spam folder.
+				p.popup__text
+					|Still no email? Click 
+					a(href="#").popup__text.popup__text_accent here 
+					|to resend it.
+				.popup__confirm
+					|A confirmation email has been sent again.
+				button.button.button__modal.button__modal_recover.recover-close-triger Close	
+	.popup-wrap.popup-wrap_void.popup-wrap_new-pass
+		.popup
+			.popup__content
+				span(href="#").popup__close-btn
+				p.popup__caption.popup__caption_congratulation
+					|New Password	
+				p.popup__text
+					|You have reset old password. 
+					br
+					|Please write a new password below
+				.login-pass-wrap
+					input(type="password" placeholder="Password").popup__input.popup__input_pass
+					span.login-pass-wrap__reliability Strong
+					.login-pass-wrap__progress
+						.login-pass-wrap__progress-bar.login-pass-wrap__progress-bar_strong(aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%;" )
+				button.button.button__modal.button__modal_login Login	
+	script(src="./bundle.min.js")
