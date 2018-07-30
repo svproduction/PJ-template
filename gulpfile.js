@@ -100,7 +100,7 @@ gulp.task('default', ['pug', 'assets', 'fonts', 'scss', 'js', 'image'], () => {
     notify: false,
   });
 
-  gulp.watch('./src/styles/**/*.scss', ['scss']);
+  gulp.watch(['./src/styles/**/*.scss', './src/styles/**/*.sass'], ['scss']); 
   gulp.watch('./src/**/*.js', ['js']).on('change', browserSync.reload);
   gulp.watch('./src/**/*.pug', ['pug']).on('change', browserSync.reload);
   gulp.watch('./src/fonts/**/*', ['fonts']).on('change', browserSync.reload);
