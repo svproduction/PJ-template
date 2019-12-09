@@ -20,7 +20,7 @@
     "animejs": "^2.2.0",
     "axios": "^0.18.1",
     "babel-polyfill": "^6.26.0",
-    "bootstrap": "^4.1.1",
+    "bootstrap": "^4.3.1",
     "gulp-sourcemaps": "^2.6.4",
     "lottie-web": "^5.1.13",
     "require-dir": "^1.0.0"
